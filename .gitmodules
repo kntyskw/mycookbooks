@@ -1,3 +1,0 @@
-[submodule "couchbase"]
-	path = couchbase
-	url = https://github.com/kntyskw/chef-couchbase
