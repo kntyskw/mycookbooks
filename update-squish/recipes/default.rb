@@ -10,6 +10,6 @@
 template "#{node['squish']['deploy_to']}/config/couchbase.yml" do
   source "couchbase.yml.erb"
   mode 0644
-  owner=node['user']
-  group=node['user']
+  owner=node['deploy_user']
+  group=node['deploy_user']
 end
