@@ -1,0 +1,19 @@
+common: &common
+  hostname: localhost
+  port: 8091
+  username:
+  password:
+  pool: default
+
+development:
+  <<: *common
+  bucket: default
+
+# set these environment variables on your production server
+production:
+  hostname: <%= node[:couchbase][:cluster][:member_host_ip] %>
+  port: 8091
+  username: <%= node[:couchbase][:server][:username] %>
+  password: <%= node[:couchbase][:server][:password] %>
+  pool: default
+  bucket: default
